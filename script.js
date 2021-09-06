@@ -3,6 +3,12 @@
  * de code in deze functie wordt één keer uitgevoerd door
  * de p5 library, zodra het spel geladen is in de browser
  */
+
+ var x = 50;
+ var y = 50;
+ var vx = 2;
+ var vy = 2;
+
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
@@ -19,8 +25,16 @@ function setup() {
  */
 function draw() {
   // stel vulkleur in
+  background('blue');
   fill(100, 100, 255);
 
   // teken een cirkel
-  ellipse(50,50,80,80);
+  ellipse(x,y,80,80);
+  x = x + vx;
+  y = x + vy;
+
+  if(y === 720) {
+    vy = vy * -1;
+}
+  
 }
