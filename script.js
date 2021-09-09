@@ -33,8 +33,12 @@ function draw() {
   x = x + vx;
   y = x + vy;
 
-  if(y === 720) {
+  if(y === 720 || y === 0) {
     vy = vy * -1;
+
+  if(x === 1280 || x === 0) {
+    vx = vx * -1;
+  }
 }
   
 }
