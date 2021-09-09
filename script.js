@@ -11,7 +11,7 @@
 
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
-  createCanvas(1280, 720);
+  createCanvas(1280a, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('blue');
@@ -29,15 +29,19 @@ function draw() {
   fill(100, 100, 255);
 
   // teken een cirkel
-  ellipse(x,y,80,80);
+  ellipse(x, y, 80, 80);
+
+  //positie updaten
   x = x + vx;
-  y = x + vy;
+  y = y + vy;
 
   if(y === 720 || y === 0) {
     vy = vy * -1;
+    //vx = vx;
 
   if(x === 1280 || x === 0) {
     vx = vx * -1;
+    //vy = vy;
   }
 }
   
