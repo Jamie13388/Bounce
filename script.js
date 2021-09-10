@@ -4,17 +4,17 @@
  * de p5 library, zodra het spel geladen is in de browser
  */
 
- var x = 50;
- var y = 50;
- var vx = 2;
- var vy = 2;
+ var x = Math.floor(Math.random() * 1000) + 40;
+ var y = Math.floor(Math.random() * 100) + 120;
+ var vx = Math.floor(Math.random() * 10) + 1;
+ var vy = Math.floor(Math.random() * 10) + 1;
 
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
-  createCanvas(1280a, 720);
+  createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  background('grey');
 }
 
 
@@ -25,7 +25,7 @@ function setup() {
  */
 function draw() {
   // stel vulkleur in
-  background('blue');
+  background('grey');
   fill(100, 100, 255);
 
   // teken een cirkel
@@ -35,14 +35,21 @@ function draw() {
   x = x + vx;
   y = y + vy;
 
-  if(y === 720 || y === 0) {
+  if(y >= 680) {
     vy = vy * -1;
-    //vx = vx;
+  }
+  if(y <= 40) {
+    vy = vy * -1;
+  }
+    
+  
 
-  if(x === 1280 || x === 0) {
+  if(x >= 1240){
     vx = vx * -1;
-    //vy = vy;
+  } 
+  if(x <= 40) {
+    vx = vx * -1;
+    
   }
 }
   
-}
