@@ -5,11 +5,11 @@ class Bal {
     speedY;
     kleur;
 
-    constructor(_x, _y) {
+    constructor(_x, _y, _speedX, _speedY) {
         this.x = _x;
         this.y = _y;
-        this.speedX = 2;
-        this.speedY = 2;
+        this.speedX = _speedX;
+        this.speedY = _speedY;
         this.kleur = color(205,213,32);
 
     }

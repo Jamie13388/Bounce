@@ -4,16 +4,27 @@
  * de p5 library, zodra het spel geladen is in de browser
  */
 
-var bal = new Bal(50, 100);
+
+var ballen = [];
 
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
 
+  for (var i = 0; i < 25; i++) {
+    var randomx = random(50, 1230);
+    var randomy = random(50, 670);
+    var randomSpeedX = random (-5, 5);
+    var randomSpeedY = random (-5, 5);
+
+    var bal = new Bal(randomx, randomy, randomSpeedX, randomSpeedY);
+
+    ballen.push(bal);
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('grey');
 }
 
+}
 
 /**
  * draw
@@ -24,9 +35,12 @@ function draw() {
   // stel vulkleur in
   background('grey');
 
-  bal.show();
-  bal.update();
+  for(var i = 0; i < ballen.length; i++) {
+    ballen[i].show();
+    ballen[i].update();
+
+  }
+  
       
   }
 
-  
