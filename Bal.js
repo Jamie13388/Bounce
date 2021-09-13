@@ -10,7 +10,7 @@ class Bal {
         this.y = _y;
         this.speedX = 2;
         this.speedY = 2;
-        this.kleur = color(`black`)  
+        this.kleur = color(205,213,32);
 
     }
 
@@ -28,13 +28,13 @@ class Bal {
             this.speedY = this.speedY * -1;
         }
             
-          
         
-          if(this.x >= 1240){
+        if(this.x >= 1240){
             this.speedX = this.speedX * -1;
           } 
-          if(this.x <= 40) {
+        if(this.x <= 40) {
             this.speedX = this.speedX * -1;
+        }
             
     }
 }
