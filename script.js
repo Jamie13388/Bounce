@@ -21,7 +21,8 @@ function setup() {
 
     ballen.push(bal);
   }
-
+  var superbal = new Superbal(randomx, randomy, randomSpeedX, randomSpeedY);
+  ballen.push(superbal);
 }
 
 /**
