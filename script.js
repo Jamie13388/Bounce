@@ -20,9 +20,7 @@ function setup() {
     var bal = new Bal(randomx, randomy, randomSpeedX, randomSpeedY);
 
     ballen.push(bal);
-  // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('grey');
-}
+  }
 
 }
 
@@ -42,5 +40,5 @@ function draw() {
   }
   
       
-  }
+}
 

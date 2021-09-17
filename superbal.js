@@ -1,4 +1,4 @@
-class Bal {
+class Superbal {
     x;
     y;
     speedX;
@@ -27,7 +27,7 @@ class Bal {
   
     // toont de bal
     show() {
-      fill(255, 0, 0);
-      ellipse(this.x, this.y, 50, 50);
+      fill(random(0,255),random(0,255),random(0,255));
+      ellipse(this.x, this.y, 80, 80);
     }
   }
