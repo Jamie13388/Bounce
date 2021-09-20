@@ -23,6 +23,9 @@ function setup() {
   }
   var superbal = new Superbal(randomx, randomy, randomSpeedX, randomSpeedY);
   ballen.push(superbal);
+
+  var nummerbal = new Nummerbal(randomx, randomy, randomSpeedX, randomSpeedY);
+  ballen.push(nummerbal);
 }
 
 /**
