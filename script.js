@@ -21,10 +21,10 @@ function setup() {
 
     ballen.push(bal);
   }
-  var superbal = new Superbal(randomx, randomy, randomSpeedX, randomSpeedY);
+  var superbal = new Superbal(random(50, 1230), random(50, 670), random (-5, 5), random (-5, 5));
   ballen.push(superbal);
 
-  var nummerbal = new Nummerbal(randomx, randomy, randomSpeedX, randomSpeedY);
+  var nummerbal = new Nummerbal(random(50, 1230), random(50, 670), random (-5, 5), random (-5, 5), 8);
   ballen.push(nummerbal);
 }
 
